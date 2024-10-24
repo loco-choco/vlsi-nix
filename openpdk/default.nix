@@ -1,3 +1,4 @@
-{ pkgs }:
-builtins.mapAttrs (name: pkgs.callPackage ((import ./buildOpenPDK.nix) name))
+pkgs:
+let buildOpenPDK = import ./buildOpenPDK.nix;
+in builtins.mapAttrs (name: v: pkgs.callPackage (buildOpenPDK name) { })
 (import ./open-pdks.nix)
