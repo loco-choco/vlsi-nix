@@ -1,5 +1,5 @@
 {
-  description = "A Nix flake for some Visual Slam Libs";
+  description = "A Nix flake for some PDKs";
   inputs = { nixpkgs.url = "github:NixOS/nixpkgs/master"; };
   outputs = { self, flake-utils, nixpkgs }:
     flake-utils.lib.eachDefaultSystem (system:
