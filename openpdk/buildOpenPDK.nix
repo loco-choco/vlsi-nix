@@ -10,7 +10,10 @@ tecnology:
 }:
 let
   version = "1.0.498";
-  pdks-flags = import ./open-pdks.nix;
+  pdks-flags = import ./open-pdks.nix {
+    inherit fetchFromGitHub;
+    inherit fetchgit;
+  };
   sources-to-flags = builtins.concatStringsSep " " (
     builtins.map (
       source: "--enable-${source}-${tecnology}=${fetchgit pdks-flags.${tecnology}.sources.${source}}"
