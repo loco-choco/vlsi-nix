@@ -1,4 +1,3 @@
-tecnology:
 {
   stdenv,
   magic-vlsi,
@@ -9,17 +8,18 @@ tecnology:
   fetchgit,
 }:
 let
+  tecnology = "sky130";
   version = "1.0.498";
-  pdks-flags = import ./open-pdks.nix {
+  pdk-sources = import ./sky130.nix {
     inherit fetchFromGitHub;
     inherit fetchgit;
   };
   sources-to-flags = builtins.concatStringsSep " " (
-    builtins.map (
-      source: "--enable-${source}-${tecnology}=${fetchgit pdks-flags.${tecnology}.sources.${source}}"
-    ) (builtins.attrNames (pdks-flags.${tecnology}.sources))
+    builtins.map (source: "--enable-${source}-${tecnology}=${pdk-sources.${source}}") (
+      builtins.attrNames (pdk-sources)
+    )
   );
-  flag-substitute-file = builtins.toFile "flag-substitute.sed" ''s/$(shell cd ''${.*} ; git rev-parse HEAD)/"unknown"/g'';
+  #flag-substitute-file = builtins.toFile "flag-substitute.sed" ''s/$(shell cd ''${.*} ; git rev-parse HEAD)/"unknown"/g'';
   pythonRuntime = python3.withPackages (ps: with ps; [ setuptools ]);
   #commit-substitute-flags =
 in
@@ -44,17 +44,23 @@ stdenv.mkDerivation {
   #  }' ./sky130/Makefile.in
 
   configurePhase = ''
-    echo "Patching SKY130 Makefile.in"
-    sed -i -f ${flag-substitute-file} ./sky130/Makefile.in
     echo "Patching Shebangs"
     patchShebangs .
     echo "Configuring PDK Files"
     ./configure --enable-${tecnology}-pdk ${sources-to-flags}
   '';
+  #configurePhase = ''
+  #  echo "Patching SKY130 Makefile.in"
+  #  sed -i -f ${flag-substitute-file} ./sky130/Makefile.in
+  #  echo "Patching Shebangs"
+  #  patchShebangs .
+  #  echo "Configuring PDK Files"
+  #  ./configure --enable-${tecnology}-pdk ${sources-to-flags}
+  #'';
   #./configure
-  postBuildPhase = ''
-    ls .
-  '';
+  #postBuildPhase = ''
+  #  ls .
+  #'';
 
 }
 
