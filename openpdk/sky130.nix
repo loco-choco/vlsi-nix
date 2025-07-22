@@ -3,144 +3,144 @@
   primitive = fetchFromGitHub {
     owner = "efabless";
     repo = "skywater-pdk-libs-sky130_fd_pr";
-    rev = "v0.20.1";
-    hash = "sha256-kO1gNdnBPuKtK5zFuO+le8qyQAwD9Ru5cZkF1xfk/UQ=";
+    rev = "refs/heads/main";
+    hash = "sha256-UJCiXaxJQMSXFsnqq0HLzkc5YOidozpsuzW8XoY2lVs=";
     leaveDotGit = true;
   };
   io = fetchFromGitHub {
     owner = "efabless";
     repo = "skywater-pdk-libs-sky130_fd_io";
-    rev = "v0.2.1";
-    hash = "sha256-tVkxGg7dvpGRSHLRvaQv9QHqAzckH2V9MssVHqjVScM=";
+    rev = "refs/heads/master";
+    hash = "sha256-9g5jkGT0hdfqGePZMV131rCAU/gVr8Czrhr/NUdiAV4=";
     leaveDotGit = true;
   };
   sc-hd = fetchFromGitHub {
     owner = "efabless";
     repo = "skywater-pdk-libs-sky130_fd_sc_hd";
-    rev = "v0.0.2";
-    hash = "sha256-Ql0ed2w88xXE9un2Qt9xpSk1qo3PGSYnOz0ndyg0Nyc=";
+    rev = "refs/heads/master";
+    hash = "sha256-WWJFgCaHHmx/hsZ7n40PxBrMswswOtiBXQwkV9UZkT0=";
     leaveDotGit = true;
   };
   sc-hdll = fetchFromGitHub {
     owner = "efabless";
     repo = "skywater-pdk-libs-sky130_fd_sc_hdll";
-    rev = "v0.1.1";
-    hash = "sha256-pFcfT2laXiuqzi3ZZt0YrLNEpboXsRj9nD7FSFPz/rg=";
+    rev = "refs/heads/master";
+    hash = "sha256-qW4iDNF5PiIldSrkLZZk9nZwq80d1i95D91kJylgWEY=";
     leaveDotGit = true;
   };
   sc-ms = fetchFromGitHub {
     owner = "efabless";
     repo = "skywater-pdk-libs-sky130_fd_sc_ms";
-    rev = "v0.0.2";
-    hash = "sha256-CJa8dBNgraNcDRoup+IjvNuOuChKVsxB3Pr67j1P2vE=";
+    rev = "refs/heads/master";
+    hash = "sha256-V8D/Z8s/oOzWK6bUpqAtXlP+KJwtiMc5U03Z444Ntac=";
     leaveDotGit = true;
   };
   sc-ls = fetchFromGitHub {
     owner = "efabless";
     repo = "skywater-pdk-libs-sky130_fd_sc_ls";
-    rev = "v0.1.1";
-    hash = "sha256-/7WfyKntcuQTdWhu7f4u+KhJWLX3/LK9chpcxddA+Ew=";
+    rev = "refs/heads/master";
+    hash = "sha256-0fIZpBOH4MxDQcsdjpawsFGwp9gEEYsSD1F/917m10U=";
     leaveDotGit = true;
   };
   sc-hvl = fetchFromGitHub {
     owner = "efabless";
     repo = "skywater-pdk-libs-sky130_fd_sc_hvl";
-    rev = "v0.0.3";
-    hash = "sha256-tldR8jyjW4PoRmPWyb4EsTKZDesNq9F5lG6hHYP7U5M=";
+    rev = "refs/heads/master";
+    hash = "sha256-6YmJYMIJ/0ULHE7DPjh9EUE+7BfuaJ3O9oLrLVFa3nU=";
     leaveDotGit = true;
   };
   sc-lp = fetchFromGitHub {
     owner = "efabless";
     repo = "skywater-pdk-libs-sky130_fd_sc_lp";
-    rev = "v0.0.2";
-    hash = "sha256-jOjG1+E3Nk5oxjsKO3ym8mPGRdgMmRr/hi0FbSwMWOU=";
+    rev = "refs/heads/master";
+    hash = "sha256-Ebfwf8FjZy2wiJBltk35ZReCOkefjCb65NPDm0HyqVU=";
     leaveDotGit = true;
   };
   sc-hs = fetchFromGitHub {
     owner = "efabless";
     repo = "skywater-pdk-libs-sky130_fd_sc_hs";
-    rev = "v0.0.2";
-    hash = "sha256-jOjG1+E3Nk5oxjsKO3ym8mPGRdgMmRr/hi0FbSwMWOU=";
+    rev = "refs/heads/master";
+    hash = "sha256-z2tmg1CecGfNoNUL3YCGjEYkBMYLW8dRy5XFWXq97XM=";
     leaveDotGit = true;
   };
 
   alpha = fetchFromGitHub {
     owner = "PaulSchulz";
     repo = "sky130_pschulz_xx_hd";
-    rev = "6eb3b0718552b034f1bf1870285ff135e3fb2dcb";
-    hash = "sha256-L6Soq3jqnVq2QyrwhvpmwHB7wgu+ezFujtabi3eX+Bg=";
+    rev = "refs/heads/master";
+    hash = "sha256-F7rNmKO50hdbDuFvd/8kspZVT0V1ryqqBiLek13ioVY=";
     leaveDotGit = true;
   };
 
   xschem = fetchFromGitHub {
     owner = "StefanSchippers";
     repo = "xschem_sky130";
-    rev = "cdb5dba83695057cbf2da63b6c41a2570d68d4af";
-    hash = "sha256-wGguyCIpr7cyH2Ye/VzaxbR80MLU6yMnA4f704dSH60=";
+    rev = "refs/heads/main";
+    hash = "sha256-077qQRGNyc7DsPqKwPGUxPMWlva+ipCbhZ1wirasnTk=";
     leaveDotGit = true;
   };
 
   klayout = fetchFromGitHub {
     owner = "efabless";
     repo = "sky130_klayout_pdk";
-    rev = "68b8aa87c129191f642da662d348e9ca6930581b";
-    hash = "sha256-Ys2jnoMfW1K+xTw6YlSIDCYxItU2k/xu4agW1TceUmE=";
+    rev = "refs/heads/main";
+    hash = "sha256-x+NgPVZ+01WH7PQr9+r/0R1xzjAzZpEzcL6UO5pFnxg=";
     leaveDotGit = true;
   };
 
   precheck = fetchFromGitHub {
     owner = "efabless";
     repo = "mpw_precheck";
-    rev = "gfmpw-1d";
-    hash = "sha256-Fzoj5EahUrTwEcFgFhANleon9By9GVOa96McdhblF0Q=";
+    rev = "refs/heads/main";
+    hash = "sha256-HslEzw9TPJlKEg66aSDv6780hdnaTq5JB0678RxZKIM=";
     leaveDotGit = true;
   };
 
   sram = fetchFromGitHub {
     owner = "efabless";
     repo = "sky130_sram_macros";
-    rev = "7b40220ebd47b8c17d58a94abaa57f111a08987a";
-    hash = "sha256-v2mKPnnCKvEW9OLPTRhZjtfO7Pnp9sRaISiWs8hw/ng=";
+    rev = "refs/heads/main";
+    hash = "sha256-mBImCXvd3nZvvl0pD5pH7VHvM8/C934Q9TW4GDsFLQQ=";
     leaveDotGit = true;
   };
 
   sram-space = fetchgit {
     url = "https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_bd_sram";
     fetchSubmodules = false;
-    rev = "refs/tags/v0.0.0";
-    hash = "sha256-RbMTE0DVSbWaUOya0gbGOtwX49L0YAQNBbo0gzy0rNI=";
+    rev = "refs/heads/main";
+    hash = "sha256-sJ9tEHUGZz8bcBJragSjCg2tQFjCPjLjlUAhfVIG42E=";
     leaveDotGit = true;
   };
 
   reram = fetchgit {
     fetchSubmodules = false;
     url = "https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_fd_pr_reram";
-    rev = "refs/tags/v2.0.2";
-    hash = "sha256-1TXnDQqzg7JEIPwLA0syi5m6Nq0ncLzd7ddVOJOEmrM=";
+    rev = "refs/heads/main";
+    hash = "sha256-+HMb+mDsbyDvxQu33HSfLCpRUsYtqU14VCpQsoyFxQk=";
     leaveDotGit = true;
   };
 
   osu-t12 = fetchgit {
     fetchSubmodules = false;
     url = "https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc_t12";
-    rev = "ac90ef0c622a9377a16b5218d9da3ac4169eeaaf";
-    hash = "sha256-O4uzcdCMdGY6+cqBy5otSarPGlgUbVJgRRJvcLiubR8=";
+    rev = "refs/heads/main";
+    hash = "sha256-RUizbSYI4zIkGhEgrpurWWIBeqaBBEloFgz61usFbow=";
     leaveDotGit = true;
   };
 
   osu-t15 = fetchgit {
     fetchSubmodules = false;
     url = "https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc_t15";
-    rev = "95d1c19abb47e1b2945847acb4e817b1b8417c43";
-    hash = "sha256-98AcYWs5StvD8GAEtyncm1Qzg4ibFcWVfxMZIsvI6Bw=";
+    rev = "refs/heads/main";
+    hash = "sha256-oa4k8uq1Jr2YvR+5WfjZcnp45lukrbFx1iv4Qs4amMY=";
     leaveDotGit = true;
   };
 
   osu-t18 = fetchgit {
     fetchSubmodules = false;
     url = "https://foss-eda-tools.googlesource.com/skywater-pdk/libs/sky130_osu_sc_t18";
-    rev = "aa2b509f3c8f32ea94fdb55ac9768754667c1658";
-    hash = "sha256-m6n/URKy5FJ699+QVW1SPTCA7I/B8pUxbODKtawPe+M=";
+    rev = "refs/heads/main";
+    hash = "sha256-fRAUtMUMWo1LWGPqQa5EjqjRzX7QnsZBrhCXj1xcbCw=";
     leaveDotGit = true;
   };
 }
