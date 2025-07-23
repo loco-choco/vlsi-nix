@@ -41,14 +41,26 @@ stdenv.mkDerivation {
     git
   ];
 
-  makeFlags = [
-    "SHARED_PDKS_PATH=$(out)/share/pdk"
-  ];
+  #makeFlags = [
+  #  "SHARED_PDKS_PATH=$(out)/share/pdk"
+  #  "ENABLED_VARIANTS=A"
+  #];
 
   configurePhase = ''
-    #echo "Patching Shebangs"
+    echo "Patching Shebangs"
     patchShebangs .
     echo "Configuring PDK Files"
-    ./configure --enable-${tecnology}-pdk ${sources-to-flags}
+    ./configure --enable-${tecnology}-pdk ${sources-to-flags} --prefix=$(out)
   '';
+
+  #preBuild = ''
+  #'';
+
+  #preInstall = ''
+  #  ls $out/share/pdk
+  #'';
+  #postInstall = ''
+  #  mkdir -p $out/share/pdk
+  #  cp -r /build/output $out/share/pdk
+  #'';
 }
