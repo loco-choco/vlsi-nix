@@ -27,6 +27,6 @@
       }
     )
     // {
-      overlay = import ./overlay.nix;
+      overlays.default = import ./overlay.nix;
     };
 }
