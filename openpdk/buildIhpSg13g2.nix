@@ -8,8 +8,8 @@ stdenvNoCC.mkDerivation {
   src = fetchFromGitHub {
     owner = "IHP-GmbH";
     repo = "IHP-Open-PDK";
-    rev = "82478bf9442edc572b596136285de70c83ac4f16";
-    hash = "sha256-9Z2e6QLnTgV4zxvNbIcJm8BXEyIVvOKfkOZ2o3rbwFM=";
+    rev = "668ee5dbd2bde0915785f83d772b1bdbdcd55235";
+    hash = "sha256-x/ywiRhCY63N/njF+cd9oBPMT/sfC30fmlQuCBY0pt0=";
     fetchSubmodules = true;
   };
 
