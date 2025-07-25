@@ -22,6 +22,7 @@
           sky130 = pkgs.openpdk.sky130;
           gf180mcu = pkgs.openpdk.gf180mcu;
           ihp-sg13g2 = pkgs.openpdk.ihp-sg13g2;
+          asap7 = pkgs.openpdk.asap7;
         };
       }
     )
