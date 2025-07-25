@@ -9,7 +9,7 @@ stdenvNoCC.mkDerivation {
     owner = "IHP-GmbH";
     repo = "IHP-Open-PDK";
     rev = "82478bf9442edc572b596136285de70c83ac4f16";
-    hash = "";
+    hash = "sha256-9Z2e6QLnTgV4zxvNbIcJm8BXEyIVvOKfkOZ2o3rbwFM=";
     fetchSubmodules = true;
   };
 
@@ -17,10 +17,12 @@ stdenvNoCC.mkDerivation {
     stdenvNoCC
   ];
 
-  preConfigure = ''
+  configurePhase = ''
     echo "Patching Shebangs"
     patchShebangs .
   '';
+
+  dontBuild = true;
 
   installPhase = ''
     mkdir -p $out/share/pdk
